@@ -1,38 +1,53 @@
 .App {
+  display: grid;
+  grid-template-columns: 0.2fr 6fr;
+  gap: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  padding: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form {
+  border: 1px solid green;
+  grid-column: span 2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App article {
+  border: 2px solid red;
+  border-left: 2px solid blue;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  gap: 0.5em;
 }
 
-.App-link {
-  color: #61dafb;
+.searchedVideos section {
+  background: linear-gradient(
+    rgb(255, 255, 255, 0.08),
+    rgb(255, 255, 255, 0.08)
+  );
+  box-shadow: rgb(255, 255, 255, 0.05) 1px 1px 1px,
+    rgb(255, 255, 255, 0.08) -1px -1px 1px;
+  border-radius: 0.9rem;
+  border: none;
+  z-index: 10;
+  width: 300px;
+  height: 300px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.searchedVideos section img {
+  border-top-right-radius: 0.8rem;
+  border-top-left-radius: 0.8rem;
+  width: 300px;
+  height: 200px;
+}
+
+.searchedVideos section h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 350px;
+  /* color: #fff; */
 }
