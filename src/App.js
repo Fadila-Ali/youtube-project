@@ -10,7 +10,7 @@ import SearchFeed from "./components/SearchFeed";
 import VideoDetails from "./components/VideoDetails";
 import Form from "./components/Form";
 
-function App({ input, setInput, handleSubmit }) {
+function App({ data }) {
   // const [data, setData] = useState([]);
   // const [input, setInput] = useState("");
 
@@ -46,7 +46,7 @@ function App({ input, setInput, handleSubmit }) {
   return (
     <div className="App">
       <Router>
-        <Form handleSubmit={handleSubmit} />
+        <Form />
         {/* <article className="form">
           <form onSubmit={handleSubmit}>
             <label>
@@ -69,7 +69,7 @@ function App({ input, setInput, handleSubmit }) {
           <Route path="/video/:id" element={<VideoDetails />} />
           <Route
             path="/search/:userInput"
-            element={<SearchFeed input={input} setInput={setInput} />}
+            element={<SearchFeed data={data} />}
           />
         </Routes>
       </Router>
