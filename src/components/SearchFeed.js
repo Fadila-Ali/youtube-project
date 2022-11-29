@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { Searching } from "../api/fetch";
+import "./SearchFeed.css";
 
 const SearchFeed = ({ data }) => {
   return (
     <article className="searchedVideos">
-      SearchFeed
       {data && data.length === 0 ? (
-        <p>No search result yet!, please submit a search above!</p>
+        <p id="empty">No search result yet!, please submit a search above!</p>
       ) : (
-        <section>
+        <section className="videos">
           {data.map((el) => {
             return (
               <section>

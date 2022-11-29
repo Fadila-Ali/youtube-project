@@ -1,0 +1,79 @@
+.about {
+  background-image: url(https://wallpapershome.com/images/pages/pic_h/20315.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  border-radius: 0.9rem;
+  z-index: 1;
+}
+
+.content {
+  color: #fff;
+  border-radius: 0.9rem;
+  position: relative;
+  left: 10%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+}
+
+.project,
+.me {
+  background: linear-gradient(rgb(0, 0, 0, 0.3), rgb(0, 0, 0, 0.3));
+  box-shadow: rgb(122, 122, 122, 0.08) 1px 1px 1px;
+  backdrop-filter: blur(8px);
+  border-radius: 1.5rem;
+  border: none;
+  z-index: 10;
+  height: fit-content;
+  padding: 0 0.5rem;
+  grid-column: span 2;
+}
+
+.me {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  right: 40%;
+  top: 80%;
+}
+
+.me a {
+  color: aqua;
+  text-decoration-line: none;
+}
+
+.bio a:hover {
+  color: rgb(68, 68, 255);
+}
+
+.contact a {
+  padding: 0.5em;
+  font-weight: bold;
+  background: none;
+  margin: 0 0.5em;
+}
+
+.contact a:hover {
+  color: purple;
+  background: #fff;
+  border-radius: 0.5em;
+}
+
+.project {
+  position: relative;
+  left: 25%;
+  width: 80%;
+}
+
+.profile {
+  background-image: url(../image/profile.png);
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+  left: 35%;
+}

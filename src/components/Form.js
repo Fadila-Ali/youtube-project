@@ -1,12 +1,19 @@
 import { useState } from "react";
+import { Searching } from "../api/fetch";
+import { FaSearch, FaYoutube } from "react-icons/fa";
 
-const Form = () => {
+const Form = ({ setData }) => {
   const [input, setInput] = useState("");
-  const [data, setData] = useState([]);
 
   function handleSubmit(e) {
     e.preventDefault();
-    const url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${input}&maxResults=15&key=${process.env.REACT_APP_API_KEY}`;
+
+    // Searching().then((res) => {
+    //   setData(res.items);
+    //   setInput("");
+    // });
+
+    const url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${input}&maxResults=20&key=${process.env.REACT_APP_API_KEY}`;
     const result = window.localStorage.getItem(input);
     console.log("useEffect ran");
 
@@ -16,6 +23,7 @@ const Form = () => {
       // if the data is in the local storage retrieve it
       console.log(`retrieving ${input} data from local storage`);
       setData(JSON.parse(result));
+      console.log(JSON.parse(result));
       console.log(Array.isArray(JSON.parse(result)));
       setInput("");
     } else {
@@ -34,6 +42,12 @@ const Form = () => {
   return (
     <article className="form">
       <form onSubmit={handleSubmit}>
+        <span className="logo">
+          <span className="logoIcon">
+            <FaYoutube />
+          </span>
+          YouTube
+        </span>
         <label>
           <input
             type="text"
@@ -43,7 +57,9 @@ const Form = () => {
             value={input}
             onChange={(e) => setInput(e.target.value)}
           ></input>
-          <button>Search</button>
+          <button>
+            <FaSearch />
+          </button>
         </label>
       </form>
     </article>

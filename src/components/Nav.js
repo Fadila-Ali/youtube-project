@@ -8,8 +8,7 @@ const Nav = () => {
     <div>
       <nav className="navbar">
         <div>
-          <span>YouTube</span>
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/" style={{ textDecoration: "none", color: "#fff" }}>
             <p>
               <span>
                 <FaHome id="icon" />
@@ -17,7 +16,7 @@ const Nav = () => {
               Home
             </p>
           </Link>
-          <Link to="/about" style={{ textDecoration: "none" }}>
+          <Link to="/about" style={{ textDecoration: "none", color: "#fff" }}>
             <p>
               <span>
                 <FaPortrait id="icon" />
