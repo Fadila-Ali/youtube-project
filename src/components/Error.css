@@ -1,0 +1,10 @@
+.error {
+  border: 1px solid #ff0000;
+  margin: 25px;
+  padding: 25px;
+}
+.error p {
+  color: #fff;
+  margin: 25px;
+  text-align: center;
+}

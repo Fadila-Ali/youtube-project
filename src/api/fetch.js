@@ -12,8 +12,8 @@ export function singleVideo(id) {
   ).then((res) => res.json());
 }
 
-// export function HomeFeed() {
-//   return fetch(
-//     `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=50${key}`
-//   ).then((res) => res.json());
-// }
+export function HomeFeed() {
+  return fetch(
+    `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=50${key}`
+  ).then((res) => res.json());
+}

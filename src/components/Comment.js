@@ -26,12 +26,12 @@ const Comment = () => {
     }
   }
   return (
-    <div>
+    <div className="comments">
       <article className="notes">
         <h4>Comments</h4>
         <form className="form" onSubmit={handleSubmit}>
           <label>
-            Commenter Name
+            Name
             <input
               type="text"
               name="commenter"
@@ -41,7 +41,8 @@ const Comment = () => {
             ></input>
           </label>
           <label>
-            Comment
+            <br />
+            Add a comment
             <input
               type="text"
               name="comment"
@@ -50,15 +51,14 @@ const Comment = () => {
               onChange={(e) => setComment(e.target.value)}
             ></input>
           </label>
-          <button type="submit" onClick={handleSubmit}>
-            Add Comment
-          </button>
+          <button type="submit" onClick={handleSubmit}></button>
         </form>
         <ul>
           {commentsArray.map((com) => {
             return (
               <li>
-                {com.commenter}: {com.comment}
+                <b>{com.commenter}</b> <br />
+                {com.comment}
               </li>
             );
           })}
