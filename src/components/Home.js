@@ -26,6 +26,7 @@ const Home = ({ data }) => {
   return (
     <div className="homeFeed">
       <SearchFeed data={data} />
+      <h2 style={{ textAlign: "start" }}>Recommanded for you</h2>
       <div className="homeVideos">
         {poplular.map((video) => {
           return (

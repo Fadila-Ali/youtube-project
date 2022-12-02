@@ -56,7 +56,7 @@ const Comment = () => {
         <ul>
           {commentsArray.map((com) => {
             return (
-              <li>
+              <li id="com">
                 <b>{com.commenter}</b> <br />
                 {com.comment}
               </li>
